@@ -8,7 +8,7 @@ const clickButton = () => {
   alert('The Event Button is clicked');
 };
 
-button.onclick = clickButton;
+// button.onclick = clickButton;
 
 button.addEventListener('click', clickButton);
 
