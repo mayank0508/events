@@ -6,6 +6,6 @@ const button = document.querySelector('button');
 
 const clickButton = () => {
     alert('The Event Button is clicked')
-}``
+}
 
 button.onclick = clickButton;
