@@ -36,7 +36,7 @@ form.addEventListener('submit', event => {
 div.addEventListener('click', event => {
   console.log('DIV')
   console.log(event);
-})
+}) //true this command will help you to run the capture command first and then the the bubble method
 
 
 button.addEventListener('click', event => {
