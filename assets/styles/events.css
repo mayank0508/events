@@ -35,3 +35,12 @@ button:active {
   border-color: #e92f6d;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
 }
+
+li {
+padding: 1rem;
+border: 1px solid wheat;
+}
+
+ul {
+  list-style: none;
+}
