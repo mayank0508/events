@@ -1,5 +1,5 @@
 const button = document.querySelector('button');
-
+const div = document.querySelector('div');
 //const button = document.querySelectorAll('button');
 // button.onclick = function() {
 
@@ -33,6 +33,13 @@ form.addEventListener('submit', event => {
   console.log(event);
 });
 
+div.addEventListener('click', event => {
+  console.log('DIV')
+  console.log(event);
+})
+
+
 button.addEventListener('click', event => {
+  console.log('BUTTON')
   console.log(event);
 });
