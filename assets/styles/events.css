@@ -44,3 +44,8 @@ border: 1px solid wheat;
 ul { 
   list-style: none;  /* this command is used to remove the bullet */
 } 
+
+.highlight {
+  background-color: red;
+  color: black; /* this is used for text color */
+}

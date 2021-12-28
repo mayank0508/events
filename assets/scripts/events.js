@@ -34,13 +34,20 @@ form.addEventListener('submit', event => {
 });
 
 div.addEventListener('click', event => {
-  console.log('DIV')
+  console.log('DIV');
   console.log(event);
-}) //true this command will help you to run the capture command first and then the the bubble method
-
+}); //true this command will help you to run the capture command first and then the the bubble method
 
 button.addEventListener('click', event => {
   event.stopPropagation();
-  console.log('BUTTON')
+  console.log('BUTTON');
   console.log(event);
+});
+
+const listItem = document.querySelectorAll('li');
+
+listItem.forEach(item => {
+  item.addEventListener('click', event => {
+    event.target.classList.toggle('highlight');
+  });
 });
