@@ -44,10 +44,19 @@ button.addEventListener('click', event => {
   console.log(event);
 });
 
-const listItem = document.querySelectorAll('li');
+//////////// This was the process via which the highlighted portion of the button was highlighted ///////////////
 
-listItem.forEach(item => {
-  item.addEventListener('click', event => {
-    event.target.classList.toggle('highlight');
-  });
+const listItem = document.querySelectorAll('li');
+const list = document.querySelector('ul');
+
+// listItem.forEach(item => {
+//   item.addEventListener('click', event => {
+//     event.target.classList.toggle('highlight');
+//   });
+// });
+
+list.addEventListener('click', event => {
+  event.target.classList.toggle('highlight');
 });
+
+////////////////////////////////////////////////////////////////
