@@ -41,6 +41,6 @@ padding: 1rem;
 border: 1px solid wheat;
 }
 
-ul {
-  list-style: none;
-}
+ul { 
+  list-style: none;  /* this command is used to remove the bullet */
+} 
