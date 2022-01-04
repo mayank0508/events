@@ -36,16 +36,20 @@ button:active {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
 }
 
-li {
-padding: 1rem;
-border: 1px solid wheat;
+#long-one {
+  height: 3000px;
 }
 
-ul { 
-  list-style: none;  /* this command is used to remove the bullet */
-} 
+li {
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+ul {
+  list-style: none;
+}
 
 .highlight {
   background-color: red;
-  color: black; /* this is used for text color */
+  color: white;
 }

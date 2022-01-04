@@ -1,30 +1,36 @@
 const button = document.querySelector('button');
-const div = document.querySelector('div');
-//const button = document.querySelectorAll('button');
+
 // button.onclick = function() {
 
-// } // this is one way to handle click events
+// };
 
-//const clickButton = (event) => {
-//event.target.disabled = true; // this property is used to make sure that the same button is not clicked more than one time
-//console.log(event);
-//};
+const buttonClickHandler = event => {
+  // event.target.disabled = true;
+  console.log(event);
+};
 
-// button.onclick = clickButton;
+const anotherButtonClickHandler = () => {
+  console.log('This was clicked!');
+};
 
-// button.addEventListener('click', clickButton);
+// button.onclick = buttonClickHandler;
+// button.onclick = anotherButtonClickHandler;
 
-// //button.forEach(button => {
-//   button.addEventListener('click', clickButton);
-// })
+const boundFn = buttonClickHandler.bind(this);
 
-// setTimeout(() => {  // this command is used to time out the particular elemtn after a while
-//   button.removeEventListener('click', clickButton);
+// button.addEventListener('click', buttonClickHandler);
+
+// setTimeout(() => {
+//   button.removeEventListener('click', buttonClickHandler);
 // }, 2000);
 
-// button.forEach(button => { // this is a type of event handler which is triggered when you hover over a button
-//   button.addEventListener('mouseenter', clickButton);
-// })
+// buttons.forEach(btn => {
+//   btn.addEventListener('mouseenter', buttonClickHandler);
+// });
+
+// window.addEventListener('scroll', event => {
+//   console.log(event);
+// });
 
 const form = document.querySelector('form');
 
@@ -33,35 +39,34 @@ form.addEventListener('submit', event => {
   console.log(event);
 });
 
-div.addEventListener('click', event => {
-  console.log('DIV');
-  console.log(event);
-}); //true this command will help you to run the capture command first and then the the bubble method
+const div = document.querySelector('div');
 
-button.addEventListener('click', event => {
-  event.stopPropagation();
-  console.log('BUTTON');
+div.addEventListener('mouseenter', event => {
+  console.log('CLICKED DIV');
   console.log(event);
-  console.log(this)
 });
 
-//////////// This was the process via which the highlighted portion of the button was highlighted ///////////////
+button.addEventListener('click', function(event) {
+  event.stopPropagation();
+  console.log('CLICKED BUTTON');
+  console.log(event);
+  console.log(this);
+});
 
-const listItem = document.querySelectorAll('li');
+const listItems = document.querySelectorAll('li');
 const list = document.querySelector('ul');
 
-// listItem.forEach(item => {
-//   item.addEventListener('click', event => {
+// listItems.forEach(listItem => {
+//   listItem.addEventListener('click', event => {
 //     event.target.classList.toggle('highlight');
 //   });
 // });
 
-// list.addEventListener('click', event => {
-//   event.target.classList.toggle('highlight');
-// });
-
-list.addEventListener('click', event => {
+list.addEventListener('click', function(event) {
+  // console.log(event.currentTarget);
+  // event.target.classList.toggle('highlight');
   event.target.closest('li').classList.toggle('highlight');
+  // form.submit();
+  button.click();
+  console.log(this);
 });
-
-////////////////////////////////////////////////////////////////
