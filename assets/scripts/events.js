@@ -42,6 +42,7 @@ button.addEventListener('click', event => {
   event.stopPropagation();
   console.log('BUTTON');
   console.log(event);
+  console.log(this)
 });
 
 //////////// This was the process via which the highlighted portion of the button was highlighted ///////////////
@@ -55,8 +56,12 @@ const list = document.querySelector('ul');
 //   });
 // });
 
+// list.addEventListener('click', event => {
+//   event.target.classList.toggle('highlight');
+// });
+
 list.addEventListener('click', event => {
-  event.target.classList.toggle('highlight');
+  event.target.closest('li').classList.toggle('highlight');
 });
 
 ////////////////////////////////////////////////////////////////
