@@ -148,6 +148,19 @@ class ProjectList {
       );
     }
     console.log(this.projects);
+    this.connectDropable();
+  }
+
+  connectDropable() {
+    const list = document.querySelectorAll(`${type}-project ul`);
+
+    list.addEventListener('dragenter', event => {
+      if (event.dataTransfer.type[0] === 'text/plain') event.preventDefault();
+    });
+
+    list.addEventListener('dragleave', event => {
+      if (event.dataTransfer.type[0] === 'text/plain') event.preventDefault();
+    });
   }
 
   setSwitchHandlerFunction(switchHandlerFunction) {
